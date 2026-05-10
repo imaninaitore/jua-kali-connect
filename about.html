@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial scale=1.0"
-   <title></title>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
     <title>Mastering HTML: A complete student guide</title>
 </head>
 <body>
@@ -13,40 +12,75 @@
         <nav aria-label="Main navigation">
             <ul class="nav-list">
                 <li><a href="#links">Links</a></li>
-                <li><a href="#media">Links</a></li>
-                <li><a href="#tables">Links</a></li>
-                <li><a href="#forms">Links</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#forms">Forms</a></li>
                 <li><a href="mailto:imaninaitore1726@gmail.com">Email instructor</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="links">
-            <h2>1. Navigation & Pathing</h2>
-            <p>
-                       <a href="https://zinduaschool.com" target="blank">Learn more</a>
-     <strong>Absolute link</strong> points to an external site
+             <h2>1. Navigation & Pathing</h2>
+             <p>
+                <strong>Absolute link</strong> points to an external site
+               <a href="https://zinduaschool.com" target="_blank">Learn more</a>
+             </p>
 
-            </p>
-            <p>
-                       <a href="https://zinduaschool.com" target="blank">Learn more</a>
-     <strong>Relative link</strong> points to a resource or page within the same page
-     <a href="contact.html">Contact us</a>
-            </p>
-     <strong>internal link</strong>to an internal resource
-     <a href="index.html">home</a>
-     <strong>internal link</strong>to an internal resource
-     <a href="#specialised">Jump to date & color picker</a>
-            </p>
+             <p>
+                <strong>Relative link</strong> points to a resource or page  within the same website.
+               <a href="complete.html">Contact us</a>
+             </p>
+
+             <p>
+                <strong>internal link</strong> points to an internal resource in the same page.
+               <a href="#specialized">Jump to the date & color picker</a>
+             </p>       
        </section>
-             <!--Multimedia-->
-  <section id="media">
-    <h2>Multimedia and responsive Graphics</h2>
-    <h3>responsive images</h3>
-        <P>the browser chooses the best image based on the device width</P>
-        <img src="assets/images/" alt=""
-       </section>
- 
+
+<!--Multimedia-->
+             <section id="media">
+                <h2>Multimedia and responsive graphics</h2>
+                <h3>Responsive images</h3>
+                <p>The browser chooses the best image based on the device width</p>
+                <img src="assets/images/rock.jpg" 
+                     srcset="assets/images/tokyo train.jpg 300w, assets/images/bridge.jpg 800w, assets/images/Anchor.jpg 1200w" 
+                     sizes="(max-width: 600px) 100vw, 50vw"
+                     alt="water on a rock" width="300px" height="300px">
+                <h3>Image maps</h3>
+                <img src="assets/images/mountains.jpg" 
+                     usemap="#deskmap"
+                     alt="mountains" 
+                     width="800" 
+                     height="500">
+                     <map name="deskmap">
+                        <!--Rectangle area(x1,y1,x2,y2)-->
+                        <area shape="rect" 
+                              coords="34,44,270,350" 
+                              href="https://zinduaschool.com" 
+                              target="_blank"
+                              alt="coding school">
+                              <!-- Circular area(x,y radius)-->
+                        <area shape="circle"
+                              coords="337,300,44" 
+                              href="https://google.com" 
+                              target="_self" 
+                              alt="search"
+                     </map>
+                     <!-- video and audio -->
+                      <h3>Audio and Video players</h3>
+                      <audio controls style="width: 100%; margin-bottom: 10px;">
+                        <source src="assets/audio/audio1.mp3" type="audio/mpeg">
+                        your browser does not support the audio tag.
+                      </audio>
+
+                      <!--the poster attribute below adds the thumbnail image-->
+                      <video width="100%" controls 
+                            poster=".assets/images/bridge.jpg"
+                         <source src="assets/videos/video1.mp4" type="video/mp4">
+                         Your browser does not support the video tag.
+                       </video>
+             </section>
    </main>
 </body>
 </html>
